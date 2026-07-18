@@ -4,7 +4,7 @@
 int main(){
     int a,b;
     float x;
-    printf("nhập a,b:");
+    printf("nhap a,b:");
     scanf("%d %d",&a,&b);
     
     if(a==0){
