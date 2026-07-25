@@ -10,19 +10,11 @@ int main() {
     printf("Nhap ma so sinh vien: ");
     scanf("%s", mssv);
     
-    // Xoa bo nho dem de tranh loi khi nhap chuoi co khoang trang
-    while (getchar() != '\n'); 
 
     printf("Nhap ho va ten: ");
-    fgets(hoten, sizeof(hoten), stdin);
-    
-    // Loai bo ky tu xuong dong \n do fgets doc vao
-    for (int i = 0; hoten[i] != '\0'; i++) {
-        if (hoten[i] == '\n') {
-            hoten[i] = '\0';
-            break;
-        }
-    }
+
+    scanf(" %[^\n]", hoten); 
+
 
     printf("Nhap diem toan: ");
     scanf("%f", &toan);

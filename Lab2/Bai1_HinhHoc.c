@@ -10,7 +10,6 @@ int main() {
     
     p = (a + b + c) / 2;
     S = sqrt(p * (p - a) * (p - b) * (p - c));
-    printf("Dien tich tam giac la: %.2f\n", S); 
     
     printf("Chu vi tam giac la: %.2f\n", p);
     printf("Dien tich tam giac la: %.2f\n", S);
