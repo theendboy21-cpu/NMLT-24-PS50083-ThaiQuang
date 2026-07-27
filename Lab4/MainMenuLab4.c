@@ -59,7 +59,6 @@ int main()
             scanf("%d", &x);
 
             int uoc = 0;
-            // Dem so uoc tu 1 den x
             for (int i = 1; i <= x; i++)
             {
                 if (x % i == 0)
@@ -83,9 +82,7 @@ int main()
             int x;
             printf("Nhap x: ");
             scanf("%d", &x);
-
             int laSoChinhPhuong = 0;
-
             for (int i = 0; i <= x; i++)
             {
                 if (i * i == x)
@@ -111,6 +108,5 @@ int main()
             printf("\nChuc nang khong hop le! Vui long chon lai (1 - 4).\n\n");
         }
     } while (chon != 4);
-
     return 0;
 }
