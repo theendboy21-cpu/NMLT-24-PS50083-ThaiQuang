@@ -53,27 +53,24 @@ int main()
         case 2:
             printf("Ban da chon chuc nang: 2. Giai phuong trinh bac 2.\n");
             printf("Nhap he so a b c :");
-            scanf(" %f %f %f", &a, &b, &c);
+            scanf("%f %f %f", &a, &b, &c); 
             if (a == 0)
             {
-                // Trường hợp 1: Phương trình trở thành phương trình bậc nhất bx + c = 0
-                if (b == 0 && c == 0)
+                if (b == 0)
                 {
-                    printf("Phuong trinh co vo so nghiem.\n");
-                }
-                else if (b == 0 && c != 0)
-                {
-                    printf("Phuong trinh vo nghiem.\n");
+                    if (c == 0)
+                        printf("Phuong trinh co vo so nghiem.\n");
+                    else
+                        printf("Phuong trinh vo nghiem.\n");
                 }
                 else
-                { // b khac 0
+                {
                     x = -c / b;
                     printf("Phuong trinh co nghiem duy nhat x = %.2f\n", x);
                 }
             }
             else
             {
-                // Trường hợp 2: a khác 0, thực hiện tính toán Delta
                 delta = b * b - 4 * a * c;
 
                 if (delta < 0)
@@ -86,10 +83,10 @@ int main()
                     printf("Phuong trinh co nghiem kep x = %.2f\n", x);
                 }
                 else
-                { // delta lon hon 0
+                {
                     x1 = (-b + sqrt(delta)) / (2 * a);
                     x2 = (-b - sqrt(delta)) / (2 * a);
-                    printf("Phuong trinh co 2 nghiem rieng biet:\n");
+                    printf("Phuong trinh co 2 nghiem phan biet:\n");
                     printf("x1 = %.2f\n", x1);
                     printf("x2 = %.2f\n", x2);
                 }
