@@ -35,7 +35,7 @@ int main()
             scanf("%lf", &x);
             if (x == (int)x)
             {
-                int n = (int)x; 
+                int n = (int)x;
                 int uoc = 0;
                 for (int i = 1; i <= n; i++)
                 {
@@ -54,7 +54,7 @@ int main()
                     printf("%.4lf khong phai la so nguyen to.\n\n", x);
                 }
                 int laSoChinhPhuong = 0;
-                for (int i = 0; i <= n; i++) 
+                for (int i = 0; i <= n; i++)
                 {
                     if (i * i == n)
                     {
@@ -81,9 +81,53 @@ int main()
             break;
         case 2:
             printf("Ban da chon chuc nang 2. Tim uoc chung va boi chung cua 2 so.\n");
+            int soA, soB, USCLN, BSCNN;
+            printf("Nhap so A = ");
+            scanf("%d", &soA);
+            printf("Nhap so B = ");
+            scanf("%d", &soB);
+            USCLN = 0;
+            for (int i = 1; i < soA; i++)
+            {
+                if (soA % i == 0 && soB % i == 0)
+                {
+                    if (USCLN < i)
+                    {
+                        USCLN = i;
+                    }
+
+                    printf("Uoc so chung lon nhat la: %d\n", USCLN);
+                }
+            }
+            BSCNN = (soA / USCLN) * soB;
+            printf("Boi so chung nho nhat la: %d\n", BSCNN);
             break;
         case 3:
             printf("Ban da chon chuc nang 3. Tinh tien cho quan karaoke.\n");
+            int gioBD, gioKT, soGio;
+            float tienPhaitra;
+            printf("Nhap gio bat dau:");
+            scanf("%d", &gioBD);
+            printf("Nhap gio ket thuc:");
+            scanf("%d", &gioKT);
+            soGio = gioKT - gioBD;
+            if (gioBD < 12 || gioKT > 23 || gioBD > gioKT)
+            {
+                printf("Nhap sai gio hay nhap lai");
+                return 0;
+            }
+            if (soGio < 3)
+            {
+                tienPhaitra = soGio * 150000;
+                printf("so tien phai tra cho %d gio la: %.0f\n", soGio, tienPhaitra);
+            }
+            else
+                tienPhaitra = 3 * 150000 + ((soGio - 3) * 150000 * 0.7);
+            if (gioBD >= 14 && gioBD <= 17)
+            {
+                tienPhaitra = tienPhaitra * 0.9;
+            }
+            printf("Tong so tien phai tra cho %d gio la: %.0f\n", soGio, tienPhaitra);
             break;
         case 4:
             printf("Ban da chon chuc nang 4. Tinh tien dien.\n");
